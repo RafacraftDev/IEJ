@@ -1,5 +1,9 @@
 # IEJ - Interactive Expression Java Interpreter
 
+![GitHub repo size](https://img.shields.io/github/repo-size/RafacraftDev/IEJ)
+![GitHub license](https://img.shields.io/github/license/RafacraftDev/IEJ)
+![GitHub top language](https://img.shields.io/github/languages/top/RafacraftDev/IEJ)
+
 IEJ is a lightweight mini-interpreter built in Java using a **node-based regex system**.  
 It allows you to define sequences, groups, literals, and other elements to detect and capture structured input, like simple `printl("…");` commands, without manually writing complex regular expressions.
 
