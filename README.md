@@ -86,3 +86,47 @@ java -cp bin iej.test.Main
 ## 📄 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Example
+
+```java
+package com.iej;
+
+import iej.node.Group;
+import iej.node.Literal;
+import iej.node.Node;
+import iej.node.NodeMatcher;
+import iej.node.Parse;
+import iej.node.Sequence;
+import iej.node.StringLiteral;
+import iej.node.Whitespace;
+
+public class Main {
+	static Node node = Sequence.of(
+	    Literal.of("printl"),
+		Whitespace.optional(),
+		Parse.of('('),
+		Whitespace.optional(),
+		Group.of(StringLiteral.of()),
+		Whitespace.optional(),
+		Parse.of(')'),
+		Literal.of(";")
+	);
+	
+	public static void main(String[] args) {
+		interpret("printl(\"Hola, mundo!\");");
+	}
+	static void interpret(String string){
+		String[] parts = string.split("(?<=;)");
+		
+		for (String part : parts) {
+			String matches = node.get();
+			if (part.matches(matches)) {
+				NodeMatcher nodeMatcher = NodeMatcher.of(part, node);
+				String group = nodeMatcher.group(1);
+				System.out.println(group);
+			}
+		}
+	}
+}
+```
