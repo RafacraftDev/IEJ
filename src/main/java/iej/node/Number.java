@@ -1,6 +1,4 @@
-package iej;
-
-import iej.node.Node;
+package iej.node;
 
 public class Number extends Node {
 	private Number(int i, int j) {
