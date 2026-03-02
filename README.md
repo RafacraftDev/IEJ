@@ -1,4 +1,4 @@
-# IEJ - Interactive Expression Java Interpreter
+# Interactive Expression Java Interpreter <img width="50" height="50" alt="1000253886" src="https://github.com/user-attachments/assets/7544dfc3-ada9-42fc-9a6b-e9d454e7c1bc" />
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/RafacraftDev/IEJ)
 ![GitHub license](https://img.shields.io/github/license/RafacraftDev/IEJ)
