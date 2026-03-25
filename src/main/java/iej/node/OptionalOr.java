@@ -14,4 +14,8 @@ public class OptionalOr extends Node {
 	private OptionalOr(String... options) {
 		super(Or.build(options) + "?");
 	}
+
+	public OptionalOr of(String... options) {
+		return new OptionalOr(options);
+	}
 }
